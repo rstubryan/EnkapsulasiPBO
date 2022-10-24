@@ -22,7 +22,7 @@ public class Teacher extends Person {
    
    @Override
    public String toString() {
-      return "Dosen : " + super.toString();
+      return "Teacher : " + super.toString();
    }
    
    public boolean addCourse(String course) {
@@ -36,12 +36,13 @@ public class Teacher extends Person {
    
    public void printCourses() {
         System.out.println("=================================================");
-        System.out.println("Mata kuliah yang diajar yaitu : ");
+        System.out.println("Mata kuliah yang diampu yaitu : ");
         for (int i = 0; i < numCourses; i++) {
             System.out.println(courses[i]);
         }
         System.out.println("=================================================");
     }
+   
    public boolean removeCourse(String course) {
       boolean found = false;
       int courseIndex = -1;  
