@@ -41,6 +41,13 @@ public class Main {
             for (int i = 0; i < num; i++) {
                 System.out.print("Masukan nama Mata Kuliah ke-"+ (i+1) +" : ");
                 String course = input.next();
+                if (teacher.addCourse(course)) {
+                    System.out.println("Mata Kuliah "+ course + " ditambahkan\n");
+                } 
+                else {
+                    System.out.println("Mata Kuliah "+ course + " sudah ada tidak bisa ditambahkan lagi\n");
+                }
+                teacher.printCourses();
                 teacher.addCourse(course);
             }
             System.out.print("Masukan jumlah Mata Kuliah yang akan dihapus : ");
@@ -52,7 +59,7 @@ public class Main {
                     System.out.print("Mata Kuliah "+ course +" dihapus\n");
                 } 
                 else {
-                    System.out.print("Mata Kuliah "+ course +" tidak bisa dihapus\n");
+                    System.out.print("Mata Kuliah "+ course +" tidak ada, tidak bisa dihapus\n");
                 }
                 teacher.printCourses();
             }
