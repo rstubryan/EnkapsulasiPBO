@@ -17,12 +17,17 @@ public class Student extends Person {
         super(name, nim);
     }
 
+    @Override
+    public String toString() {
+      return "Student : " + super.toString();
+   }
+   
     public void addCourseGrade(String course, double grade) {
         courses[numCourses] = course;
         grades[numCourses] = grade;
         numCourses++;
     }
-
+    
     public void printGrades() {
         System.out.println("=================================================");
         System.out.println("Mata Kuliah yang diambil yaitu : ");
