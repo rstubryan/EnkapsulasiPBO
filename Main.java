@@ -36,7 +36,7 @@ public class Main {
         } 
         else if (type.equals("teacher")) {
             Teacher teacher = new Teacher(name, nim);
-            System.out.print("Masukan jumlah Mata Kuliah yang diajar : ");
+            System.out.print("Masukan jumlah Mata Kuliah yang diampu : ");
             int num = input.nextInt();
             for (int i = 0; i < num; i++) {
                 System.out.print("Masukan nama Mata Kuliah ke-"+ (i+1) +" : ");
